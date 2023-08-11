@@ -39,7 +39,7 @@ spec:
           type: string
           ui:field: DynamicPickExtension
           ui:options:
-            form_data: shcard/teams
+            form_data: example/teams
             # external_data: https://dummyjson.com/products/categories # 외부 API 직접 연결 가능
     - title: Choose a location
       required:
