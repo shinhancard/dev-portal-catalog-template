@@ -58,11 +58,14 @@ spec:
                 description: ex) implementation, runtimeOnly, testImplementation
                 ui:field: DynamicPickExtension
                 ui:options:
-                  form_data: scaffolder/get/dependencies
+                  form_data: scaffolder/get/dependency/type
               dependency-name:
                 title: dependency-name
                 type: string
                 description: ex) org.springframework.boot:spring-boot-starter-cache
+                ui:field: DynamicPickExtension
+                ui:options:
+                  form_data: scaffolder/get/dependency/name
               version:
                 title: version
                 type: string
