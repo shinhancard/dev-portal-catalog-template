@@ -109,7 +109,7 @@ spec:
         url: ./skeleton
         copyWithoutRender:
           - .github/workflows/*
-        dependencies: ${{ parameters.dependencies }}
+        dependencies: ${{ json parameters.dependencies }}
     - id: publish
       name: Publish
       action: publish:github
