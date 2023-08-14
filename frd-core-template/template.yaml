@@ -110,7 +110,7 @@ spec:
         copyWithoutRender:
           - .github/workflows/*
         values:
-          dependencies: ${{ json parameters.dependencies }}
+          dependencies: ${{ parameters.dependencies }}
     - id: publish
       name: Publish
       action: publish:github
