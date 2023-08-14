@@ -70,6 +70,9 @@ spec:
                 title: version
                 type: string
                 description: version
+                ui:field: DynamicPickExtension
+                ui:options:
+                  form_data: scaffolder/get/dependency/version
 
     - title: Choose a location
       required:
