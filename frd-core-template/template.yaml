@@ -56,6 +56,9 @@ spec:
                 title: type
                 type: string
                 description: ex) implementation, runtimeOnly, testImplementation
+                ui:field: DynamicPickExtension
+                ui:options:
+                  form_data: scaffolder/teams
               dependency-name:
                 title: dependency-name
                 type: string
