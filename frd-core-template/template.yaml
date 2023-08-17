@@ -47,7 +47,7 @@ spec:
         - dependencies
       properties:
         dependencies:
-          type: array
+          type: object
           title: dependency
           items:
             type: object
