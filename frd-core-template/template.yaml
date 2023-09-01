@@ -103,13 +103,22 @@ spec:
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
     - id: create
-      name: create gradle file
-      action: create:dependency:gradle
-      input:
-        url: ./skeleton
-        copyWithoutRender:
-          - .github/workflows/*
-        dependencies: ${{ parameters.dependencies }}
+        name: create gradle file
+        action: fetch:template
+          input:
+            url: ./skeleton
+            copyWithoutRender:
+              - .github/workflows/*
+            values:
+              dependencies: ${{ parameters.dependencies }}
+#    - id: create
+#      name: create gradle file
+#      action: create:dependency:gradle
+#      input:
+#        url: ./skeleton
+#        copyWithoutRender:
+#          - .github/workflows/*
+#        dependencies: ${{ parameters.dependencies }}
     - id: publish
       name: Publish
       action: publish:github
