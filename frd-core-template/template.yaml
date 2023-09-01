@@ -101,16 +101,15 @@ spec:
           java_package_name: ${{ parameters.java_package_name }}
           owner: ${{ parameters.owner }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
-          dependencies: ${{ parameters.dependencies }}
           http_port: 8080
-#    - id: create
-#      name: create gradle file
-#      action: create:dependency:gradle
-#      input:
-#        url: ./skeleton
-#        copyWithoutRender:
-#          - .github/workflows/*
-#        dependencies: ${{ parameters.dependencies }}
+    - id: create
+      name: create gradle file
+      action: create:dependency:gradle
+      input:
+        url: ./skeleton
+        copyWithoutRender:
+          - .github/workflows/*
+        dependencies: ${{ parameters.dependencies }}
     - id: publish
       name: Publish
       action: publish:github
